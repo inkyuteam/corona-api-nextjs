@@ -4,12 +4,12 @@
 **Introduction**
 A NextJS Project that makes use of the following libraries:
 
--ant-design/charts
--ant-design/cssinjs
--ant-design/icons
--antd
--axios
--tailwindcss
+- ant-design/charts
+- ant-design/cssinjs
+- ant-design/icons
+- antd
+- axios
+- tailwindcss
 
 **Demo:**
 https://nextjs-test-security-three-bowv.vercel.app/
