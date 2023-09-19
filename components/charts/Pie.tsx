@@ -1,17 +1,12 @@
-import { Pie } from '@ant-design/charts';
+'use client'
+
+import { Pie } from '@ant-design/plots';
 import React, { useEffect, useState } from 'react';
 import getData from '@/utils/getData';
 
 export const PieComponent = () => {
     const [data, setData] = useState<any[]>([]);
     const [pieDataArray, setPieDataArray] = useState<any[]>([]);
-    
-
-    
-
-
-
-    
  
     useEffect( ()=>{
         (async()=>{
