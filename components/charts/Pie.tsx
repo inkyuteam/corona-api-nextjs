@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import getData from '@/utils/getData';
 
 export const PieComponent = () => {
-    const [data, setData] = useState([]);
-    const [pieDataArray, setPieDataArray] = useState([]);
+    const [data, setData] = useState<any[]>([]);
+    const [pieDataArray, setPieDataArray] = useState<any[]>([]);
     
 
     
@@ -26,7 +26,7 @@ export const PieComponent = () => {
       
         const result = data.reduce((acc, entry) => {
             const year = entry.date.slice(0, 4);
-            const index = acc.findIndex(item => item.type === year);
+            const index = acc.findIndex((item : {type : "string"}) => item.type === year);
           
             if (index === -1) {
               acc.push({ type: year, value: entry.cumVaccinesGivenByPublishDate });
@@ -38,12 +38,13 @@ export const PieComponent = () => {
             return acc;
           }, []);
           
-          const formattedResult = result.map((entry, index) => {
+          const formattedResult = result.map((entry : { type : string, value : number}, index : number) => {
+            console.log("entry", entry);
             if (index === 0) {
               return entry;
             }
           
-            const prevYearIndex = result.findIndex(item => item.type === String(Number(entry.type) - 1));
+            const prevYearIndex = result.findIndex((item : {type : "string"}) => item.type === String(Number(entry.type) - 1));
             const prevYearValue = prevYearIndex !== -1 ? result[prevYearIndex].value : 0;
           
             return {
@@ -89,7 +90,7 @@ export const PieComponent = () => {
               overflow: 'hidden',
               textOverflow: 'eclipsis',
               textAlign: 'center',
-              fontSize: 14,
+              fontSize: '14px',
             },
             content: 'Vaccines',
           },

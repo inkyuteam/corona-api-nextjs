@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const sendRequest = (encodedParams)=> {
+const sendRequest = (encodedParams : string)=> {
     return new Promise((resolve, reject) => { 
 
         axios.get('https://api.coronavirus.data.gov.uk/v1/data?' + encodedParams)

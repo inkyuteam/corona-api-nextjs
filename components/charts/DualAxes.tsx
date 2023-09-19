@@ -5,8 +5,8 @@ import getData from '@/utils/getData';
 
 const DualAxesComponent = () => {
 
-    const [data, setData] = useState([]);
-    const [dualAxesArray, setDualAxesArray] = useState([]);
+    const [data, setData] = useState<any[]>([]);
+    const [dualAxesArray, setDualAxesArray] = useState<any[]>([]);
     
 
     
@@ -53,10 +53,8 @@ const DualAxesComponent = () => {
     }, [data])
     
 
-    const transformData = [
-    ];
     const config = {
-      data: [dualAxesArray, transformData],
+      data: [dualAxesArray, []],
       xField: 'time',
       yField: ['value', 'count'],
       geometryOptions: [
