@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { DualAxes } from '@ant-design/plots';
 import getData from '@/utils/getData';
 
-const DualAxesComponent = (props) => {
+const DualAxesComponent = () => {
 
     const [data, setData] = useState([]);
     const [dualAxesArray, setDualAxesArray] = useState([]);
