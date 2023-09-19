@@ -8,6 +8,9 @@ const theme: ThemeConfig = {
         marginLG : 16
     },
     Button : {
+      defaultBorderColor : '#ffffff',
+      colorBorder : '#ffffff',
+      borderRadius : 10,
       defaultBg : '#ffffff',
     }
   },

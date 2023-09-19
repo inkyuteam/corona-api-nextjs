@@ -9,7 +9,7 @@ h1, h2 {
 
 * {
     
-    @apply text-[#0c233f];
+    @apply text-[#0c233f] font-medium;
 }
 
 h1 {
