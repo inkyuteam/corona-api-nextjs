@@ -16,7 +16,7 @@ https://nextjs-test-security-three-bowv.vercel.app/
 
 **Installation**
 
-1. open the directory of the repo and run `npm install`
+1. open the directory of the repo and run `npm install --legacy-peer-deps`
 2. then run `npm run build` to build project.
 3. run `npm run dev` to run the project.
 
